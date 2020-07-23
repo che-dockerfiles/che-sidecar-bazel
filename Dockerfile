@@ -8,7 +8,7 @@
 # Contributors:
 #   Red Hat, Inc. - initial API and implementation
 
-FROM quay.io/buildah/stable:v1.14.3
+FROM quay.io/eclipse/che-container-tools:1.0.0-8caea0f
 
 ENV KUBECTL_VERSION v1.17.0
 ENV HELM_VERSION v3.0.2
