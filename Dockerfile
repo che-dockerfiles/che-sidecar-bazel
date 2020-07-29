@@ -23,7 +23,3 @@ RUN cd /tmp && wget https://github.com/bazelbuild/bazel/releases/download/${BZL_
     cd /tmp && wget https://github.com/bazelbuild/buildtools/releases/download/${BUIDLERS_VERSION}/buildifier && chmod 777 buildifier && mv buildifier /usr/bin/ && \
     cd /tmp && wget https://github.com/bazelbuild/buildtools/releases/download/${BUIDLERS_VERSION}/buildozer && chmod 777 buildozer && mv buildozer /usr/bin/
 
-ADD etc/entrypoint.sh /entrypoint.sh
-
-ENTRYPOINT [ "/entrypoint.sh" ]
-CMD ${PLUGIN_REMOTE_ENDPOINT_EXECUTABLE}
