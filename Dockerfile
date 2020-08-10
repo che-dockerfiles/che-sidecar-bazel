@@ -16,7 +16,7 @@ ENV BUIDLERS_VERSION=3.0.0
 ENV JAVA_VERSION=1.8.0
 ENV JAVA_ARCH=x86_64
 
-RUN dnf install -y wget gcc-c++ gcc file which unzip findutils nodejs git patch dnf-plugins-core java-${JAVA_VERSION}-openjdk-devel.${JAVA_ARCH} && \
+RUN dnf install -y wget gcc-c++ python3-devel gcc file which unzip findutils nodejs git patch dnf-plugins-core java-${JAVA_VERSION}-openjdk-devel.${JAVA_ARCH} && \
     dnf install -y python38 python
 
 RUN cd /tmp && wget https://github.com/bazelbuild/bazel/releases/download/${BZL_VERSION}/bazel-${BZL_VERSION}-linux-x86_64 && mv bazel-${BZL_VERSION}-linux-x86_64 /bin/bazel && chmod +x /bin/bazel && \
